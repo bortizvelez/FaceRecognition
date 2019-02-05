@@ -1,0 +1,31 @@
+@model FaceRecognition.Web.Models.PersonListViewModel 
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1 class="text-center">Person List</h1>  
+<table class="table table-sm table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">ID</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model.List)
+        {
+            <tr>
+                <td style="vertical-align: middle"><b>@person.Name</b></td>
+                <td style="vertical-align: middle">@person.Description</td>
+                <td style="vertical-align: middle">@person.Id</td>
+                <td>
+                    <button type="button" class="btn btn-info btn-sm">Edit</button>
+                    <button type="button" class="btn btn-success btn-sm">Add Image</button>
+                    <button type="button" class="btn btn-danger btn-sm">Remove</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

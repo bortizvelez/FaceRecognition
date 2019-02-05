@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="jumbotron">
+    <h1>Start Recognizing Faces</h1>
+    <p class="lead">This webpage was build using Azure Cognitive Services Face API</p>
+    <p><a href="https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview" target="_blank" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <h2>Add People</h2>
+        <p>Create a person with a photo and start recognizing.</p>
+        <p><a class="btn btn-primary btn-md" asp-area="" asp-controller="People" asp-action="Create">Start now »</a></p>
+    </div>
+    <div class="col-sm-4">
+        <h2>Recognize</h2>
+        <p>Upload an image and see all the matches with their probability.</p>
+        <p><a class="btn btn-primary btn-md" asp-area="" asp-controller="People" asp-action="Recognize">Start now »</a></p>
+    </div>
+    <div class="col-sm-4">
+        <h2>List</h2>
+        <p>See all the people stored with their current information.</p>
+        <p><a class="btn btn-primary btn-md" asp-area="" asp-controller="People" asp-action="List">Start now »</a></p>
+    </div>
+</div>

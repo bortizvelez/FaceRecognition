@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Recognize";
+}
+
+<h1 class="text-center">Recognize Faces</h1>  
+<br>
+<div class="input-group mb-3">
+  <input type="text" class="form-control col-4" id="url" placeholder="Image Url" aria-describedby="basic-addon2">
+  <div class="input-group-append col-3" style="padding: 0px" >
+    <button class="btn btn-primary" id="detect" type="button" style="width: 100px">Start</button>
+  </div>  
+</div>
+<p id="errormessage" class="text-danger d-none"></p>
+
+<div id="result" class="form-group d-none row">
+    <div class="col-7 text-center" id="resultImage"></div>
+    <div class="col-5" id="resultTable">
+        <table class="table table-sm table-hover">
+            <thead class="thead-dark"><tr>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Confidence</th>
+            </tr></thead>
+            <tbody></tbody>
+        </table>   
+    </div>
+</div>
